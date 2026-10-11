@@ -1,0 +1,23 @@
+
+name: First GitHub Actions Workflow
+
+on:
+  workflow_dispatch:
+
+env:
+  GREETING: "Hello"
+  STUDENT: "Nirupam"
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display greeting
+        run: echo "$GREETING $STUDENT!"
+
+      - name: Display repository
+        run: echo "Repository: $GITHUB_REPOSITORY"
+
+      - name: Confirm workflow completion
+        run: echo "My first GitHub Actions workflow ran successfully!"
